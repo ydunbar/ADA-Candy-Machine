@@ -6,20 +6,20 @@
 # [Optional] Do something appropriate when the buyer enters an invalid amount for the money and an invalid selection
 
 # store candy cost values
-twix = $0.65
-chips = $0.50
-nb = $0.75
-pbc = $0.65
-jfg = $0.55
+twix = 0.65
+chips = 0.50
+nb = 0.75
+pbc = 0.65
+jfg = 0.55
 
 # show prompt to user
-Puts "Welcome to Ada Developers Academy's Computer Candy Machine!
+puts "Welcome to Ada Developers Academy's Computer Candy Machine!
 (All candy provided is virtual.) \n
 How much money do ya got?"
 
 # store user input in variable
-money = gets.chomp
-puts + money ", that's all? \n
+money = gets.chomp.to_f
+puts  "#{money}, that's all? \n
 Well, lemme tell ya what we got here. \n
 A $0.65 Twix \n
 B $0.50 Chips \n
@@ -30,15 +30,15 @@ So, What'll ya have?"
 candy = gets.chomp.downcase
 
 # assign candy cost based on user selection
-if candy == a
+if candy == "a"
   candy_cost = twix
-elsif candy == b
+elsif candy == "b"
   candy_cost = chips
-elsif candy == c
+elsif candy == "c"
   candy_cost = nb
-elsif candy == d
+elsif candy == "d"
   candy_cost = pbc
-elsif candy == e
+elsif candy == "e"
   candy_cost = jfg
 end
 
